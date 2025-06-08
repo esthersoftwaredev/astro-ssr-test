@@ -1,6 +1,6 @@
 // @ts-check
 import { defineConfig } from "astro/config";
-import { viteStaticCopy } from "vite-plugin-static-copy";
+import copy from 'rollup-plugin-copy';
 
 import netlify from "@astrojs/netlify";
 import analogjsangular from "@analogjs/astro-angular";
@@ -9,20 +9,21 @@ import analogjsangular from "@analogjs/astro-angular";
 export default defineConfig({
 	vite: {
 		plugins: [
-			viteStaticCopy({
-				targets: [
-					{
-						src: "node_modules/@shoelace-style/shoelace/dist/assets",
-						dest: "shoelace-assets", // This puts all assets (including icons) to /shoelace-assets/assets/
-					},
-				],
-			}),
+			// do not use shoelace icons for now
+			// copy({
+      //   // Copy only on first build. We dont want to trigger additional server reloads.
+      //   copyOnce: true,
+      //   hook: 'buildStart',
+      //   targets: [
+      //     { src: 'node_modules/@shoelace-style/shoelace/dist/assets/*', dest: 'public/shoelace-assets/assets/' }
+      //   ]
+      // }),
 		],
 		css: {
 			preprocessorOptions: {
 				scss: {
 					api: "legacy",
-					includePaths: ["node_modules"],
+					// includePaths: ["node_modules"], // not needed but keep checking analogjs for updates on legacy api usage
 				},
 			},
 		},
