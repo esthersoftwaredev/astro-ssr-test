@@ -9,7 +9,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.9.1"
+    "@shoelace-style/shoelace": "^2.20.1",
+    "astro": "^5.9.1",
+    "rollup-plugin-copy": "^3.5.0"
   },
   "devDependencies": {
     "sass-embedded": "^1.89.1"

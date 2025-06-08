@@ -1,5 +1,6 @@
 ---
 import '../styles/global.scss';
+import "@shoelace-style/shoelace/dist/themes/light.css";
 ---
 
 <html lang="en">
@@ -12,5 +13,15 @@ import '../styles/global.scss';
 	</head>
 	<body>
 		<h1>Astro</h1>
+		<sl-button>Button</sl-button>
 	</body>
 </html>
+
+<script>
+  // setBasePath to tell Shoelace where to load icons from.
+  import { setBasePath } from '@shoelace-style/shoelace/dist/utilities/base-path.js';
+  setBasePath('/shoelace-assets/');
+
+  // Load all components.
+  import '@shoelace-style/shoelace';
+</script>
