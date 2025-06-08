@@ -11,7 +11,8 @@
   "dependencies": {
     "@shoelace-style/shoelace": "^2.20.1",
     "astro": "^5.9.1",
-    "rollup-plugin-copy": "^3.5.0"
+    "rollup-plugin-copy": "^3.5.0",
+    "vite-plugin-static-copy": "^3.0.0"
   },
   "devDependencies": {
     "sass-embedded": "^1.89.1"
