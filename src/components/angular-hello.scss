@@ -1,0 +1,11 @@
+mat-icon {
+  background-color: gray;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.5);
+    transition: transform 0.3s ease-in-out;
+    background-color: lightgray;
+  }
+}
