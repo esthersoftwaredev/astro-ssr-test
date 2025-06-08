@@ -1,14 +1,17 @@
 import { NgIf } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, Input, signal } from '@angular/core';
 
 @Component({
   selector: 'app-hello',
   standalone: true,
-  imports: [NgIf],
+  imports: [],
   template: `
     <p>Hello from Angular!!</p>
 
-    <p *ngIf="show">{{ helpText }}</p>
+    <!-- <p *ngIf="show">{{ helpText }}</p> -->
+     @if (show()) {
+       <p>Hello</p>
+     }
 
     <button (click)="toggle()">Toggle</button>
   `,
@@ -16,10 +19,10 @@ import { Component, Input } from '@angular/core';
 export class HelloComponent {
   // @Input() helpText!: string;
 
-  show = false;
+  show = signal(false);
 
   toggle() {
-    this.show = !this.show;
+    this.show.set(!this.show());
     console.log('Toggle clicked, show:', this.show);
   }
 }
