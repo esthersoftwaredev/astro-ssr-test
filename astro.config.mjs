@@ -3,7 +3,6 @@ import { defineConfig } from "astro/config";
 import { viteStaticCopy } from "vite-plugin-static-copy";
 
 import netlify from "@astrojs/netlify";
-
 import analogjsangular from "@analogjs/astro-angular";
 
 // https://astro.build/config
@@ -19,6 +18,14 @@ export default defineConfig({
 				],
 			}),
 		],
+		css: {
+			preprocessorOptions: {
+				scss: {
+					api: "legacy",
+					includePaths: ["node_modules"],
+				},
+			},
+		},
 		ssr: {
 			// transform these packages during SSR. Globs supported
 			noExternal: ["@rx-angular/**"],

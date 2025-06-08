@@ -1,10 +1,11 @@
-import { NgIf } from '@angular/common';
 import { Component, Input, signal } from '@angular/core';
+
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-hello',
   standalone: true,
-  imports: [],
+  imports: [MatButtonModule],
   template: `
     <p>Hello from Angular!!</p>
 
@@ -13,8 +14,9 @@ import { Component, Input, signal } from '@angular/core';
        <p>Hello</p>
      }
 
-    <button (click)="toggle()">Toggle</button>
+    <button mat-raised-button (click)="toggle()">Toggle</button>
   `,
+  styleUrl: '../styles/angular-material.scss',
 })
 export class HelloComponent {
   // @Input() helpText!: string;
@@ -23,6 +25,6 @@ export class HelloComponent {
 
   toggle() {
     this.show.set(!this.show());
-    console.log('Toggle clicked, show:', this.show);
+    console.log('Toggle clicked, show:', this.show());
   }
 }
