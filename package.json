@@ -9,13 +9,27 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@analogjs/astro-angular": "^1.17.1",
+    "@angular-devkit/build-angular": "^20.0.1",
+    "@angular/animations": "^20.0.2",
+    "@angular/common": "^20.0.2",
+    "@angular/compiler": "^20.0.2",
+    "@angular/compiler-cli": "^20.0.2",
+    "@angular/core": "^20.0.2",
+    "@angular/language-service": "^20.0.2",
+    "@angular/platform-browser": "^20.0.2",
+    "@angular/platform-browser-dynamic": "^20.0.2",
+    "@angular/platform-server": "^20.0.2",
     "@astrojs/netlify": "^6.3.4",
     "@shoelace-style/shoelace": "^2.20.1",
     "astro": "^5.9.1",
     "rollup-plugin-copy": "^3.5.0",
-    "vite-plugin-static-copy": "^3.0.0"
+    "rxjs": "^7.8.2",
+    "tslib": "^2.8.1",
+    "zone.js": "^0.15.1"
   },
   "devDependencies": {
-    "sass-embedded": "^1.89.1"
+    "sass-embedded": "^1.89.1",
+    "vite-plugin-static-copy": "^3.0.0"
   }
 }

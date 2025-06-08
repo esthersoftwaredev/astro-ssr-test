@@ -1,28 +1,30 @@
 ---
-import '../styles/global.scss';
+import "../styles/global.scss";
 import "@shoelace-style/shoelace/dist/themes/light.css";
+import { HelloComponent } from "../components/hello.component";
+
 ---
 
-<html lang="en">
+<html lang='en'>
 	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
+		<meta charset='utf-8' />
+		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+		<meta name='viewport' content='width=device-width' />
+		<meta name='generator' content={Astro.generator} />
 		<title>Astro</title>
 	</head>
 	<body>
 		<h1>Astro</h1>
 		<sl-button>Button</sl-button>
-		<sl-icon-button name="gear" label="Settings"></sl-icon-button>
+		<HelloComponent client:visible />
 	</body>
 </html>
 
 <script>
-  // setBasePath to tell Shoelace where to load icons from.
-  import { setBasePath } from '@shoelace-style/shoelace/dist/utilities/base-path.js';
-  setBasePath('/shoelace-assets/');
+	// setBasePath to tell Shoelace where to load icons from.
+	import { setBasePath } from "@shoelace-style/shoelace/dist/utilities/base-path.js";
+	setBasePath("/shoelace-assets/");
 
-  // Load all components.
-  import '@shoelace-style/shoelace';
+	// Load all components.
+	import "@shoelace-style/shoelace";
 </script>
