@@ -1,6 +1,5 @@
 // @ts-check
 import { defineConfig } from "astro/config";
-import copy from 'rollup-plugin-copy';
 
 import netlify from "@astrojs/netlify";
 import analogjsangular from "@analogjs/astro-angular";
@@ -8,17 +7,7 @@ import analogjsangular from "@analogjs/astro-angular";
 // https://astro.build/config
 export default defineConfig({
 	vite: {
-		plugins: [
-			// do not use shoelace icons for now
-			// copy({
-      //   // Copy only on first build. We dont want to trigger additional server reloads.
-      //   copyOnce: true,
-      //   hook: 'buildStart',
-      //   targets: [
-      //     { src: 'node_modules/@shoelace-style/shoelace/dist/assets/*', dest: 'public/shoelace-assets/assets/' }
-      //   ]
-      // }),
-		],
+		plugins: [],
 		css: {
 			preprocessorOptions: {
 				scss: {
